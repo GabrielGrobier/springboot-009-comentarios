@@ -11,7 +11,7 @@ public class ComentarioService {
     private RestTemplate restTemplate;
 
     public String obtenerComentariosUsuario(int usuarioId){
-        String usuarioUrl = "http://localhost:8080/usuarioid/"+usuarioId;
+        String usuarioUrl = "http://localhost:8080/obtenerUsuarioDto/"+usuarioId;
         String usuarioData = restTemplate.getForObject(usuarioUrl, String.class);
 
         String postUrl = "https://jsonplaceholder.typicode.com/posts?userId="+usuarioId;
@@ -23,5 +23,6 @@ public class ComentarioService {
 
 
     }
+    
     
 }
